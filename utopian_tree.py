@@ -14,8 +14,27 @@ import sys
 #
 
 def utopianTree(n):
-    # Write your code here
-
+    height = 0
+    if(n==0):
+        height = 1
+    else:
+        for i in range(n+1):
+            
+            if(i==0):
+                height =1
+            
+            elif i ==1:
+                height = height*2
+                
+            elif i % 2 !=0:
+                height = height * 2
+                
+            else:
+                height += 1
+    
+    return height        
+    
+    
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
