@@ -17,13 +17,14 @@ def permutationEquation(p):
     y = []
     z=[]
     z = sorted(p)
+
     for i in range(len(p)):
         
-        a = p.index(z[i])
-        b = p.index(a) +1
-        y.append(b)
+        a = p.index(z[i]) +1
+        y.append(p.index(a) +1)
     
     return y
+
     
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
