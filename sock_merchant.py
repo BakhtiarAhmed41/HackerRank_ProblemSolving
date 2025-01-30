@@ -16,7 +16,26 @@ import sys
 #
 
 def sockMerchant(n, ar):
-    # Write your code here
+    ar.sort()
+    pairs = 0
+    
+    for i in range(n):
+        num = ar.count(ar[i])
+        
+        if(i == 0 or ar[i] != ar[i-1]):
+            if(num%2==0):
+                p = num/2
+                pairs += p 
+            else:
+                num -= 1
+                p = num/2
+                pairs += p 
+        
+        else:    
+            continue
+                
+    return int(pairs)    
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
