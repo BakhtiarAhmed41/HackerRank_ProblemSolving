@@ -16,7 +16,12 @@ import sys
 #
 
 def pageCount(n, p):
+    front_turns = p // 2
     
+    back_turns = (n // 2) - (p // 2)
+    
+    return min(front_turns, back_turns)
+       
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
