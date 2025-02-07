@@ -14,7 +14,24 @@ import sys
 #
 
 def findDigits(n):
-    # Write your code here
+    
+    number = str(n)
+    count = 0
+    
+    for i in range(len(number)):
+        
+        if(int(number[i])==0):
+            continue
+        
+        elif(n%int(number[i])==0):
+            count += 1
+        
+        else:
+            continue
+    
+    return count    
+    
+    
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
