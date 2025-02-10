@@ -6,12 +6,11 @@ import random
 import re
 import sys
 
-#
 # Complete the 'findDigits' function below.
 #
 # The function is expected to return an INTEGER.
 # The function accepts INTEGER n as parameter.
-#
+
 
 def findDigits(n):
     
