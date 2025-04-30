@@ -14,7 +14,20 @@ import sys
 #
 
 def pickingNumbers(a):
-    # Write your code here
+    n = len(a)
+    a.sort()  # Fix: added parentheses to actually sort the list
+    max_count = 0
+
+    for i in range(n):
+        count = 1  # include a[i] itself
+        for j in range(i + 1, n):
+            if abs(a[i] - a[j]) <= 1:
+                count += 1
+        if count > max_count:
+            max_count = count
+
+    return max_count
+    
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
