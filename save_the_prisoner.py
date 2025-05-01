@@ -17,8 +17,9 @@ import sys
 #
 
 def saveThePrisoner(n, m, s):
-    # Write your code here
-
+    last = (s + m - 1) % n
+    return last if last != 0 else n
+    
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
